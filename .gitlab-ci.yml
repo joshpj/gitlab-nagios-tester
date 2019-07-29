@@ -1,0 +1,9 @@
+Test Nagios config:
+  stage: test
+  image: quay.io/joshpj/centos7-nagios-tester
+  only:
+    changes:
+      - path/to/etc/nagios/**/*
+  script:
+    - ln -s $CI_PROJECT_DIR/path/to/etc/nagios/ /etc/nagios
+    - /usr/sbin/nagios -v /etc/nagios/nagios.cfg
