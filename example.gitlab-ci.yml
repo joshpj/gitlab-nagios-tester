@@ -1,6 +1,6 @@
 Test Nagios config:
   stage: test
-  image: quay.io/joshpj/centos7-nagios-tester
+  image: quay.io/pennstate/centos7-nagios-tester:master
   only:
     changes:
       - path/to/etc/nagios/**/*
